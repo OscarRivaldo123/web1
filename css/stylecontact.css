@@ -1,0 +1,340 @@
+* {
+	padding: 0;
+	margin:0;
+	font-family:'Montserrat', sans-serif;
+}
+
+
+header {
+	height:66px;
+	width: 100%;
+	position: fixed;
+	background-color:rgba(239, 243, 245 );
+	top: 0;
+	z-index: 10;
+}
+header:hover{
+	background-color:rgba(206, 220, 227, );
+}
+header h1{
+	display: inline-block;
+	float:left;
+	padding:15px 24px;
+	text-transform: capitalize;
+	font-size:23px;
+	text-align:middle;
+}
+header h1 a:hover{
+	-webkit-animation:rainbow 1s infinite;
+	-ms-animation:rainbow 1s infinite;
+	-o-animation:rainbow 1s infinite;
+	animation:rainbow 1s infinite;
+	}
+	@-webkit-keyframes rainbow {
+	0% {color: #ff0000;}
+	10% {color: #ff8000;}
+	20% {color: #ffff00;}
+	30% {color: #80ff00;}
+	40% {color: #00ff00;}
+	50% {color: #00ff80;}
+	60% {color: #00ffff;}
+	70% {color: #0080ff;}
+	80% {color: #0000ff;}
+	90% {color: #8000ff;}
+	100% {color: #ff0080;}
+	}
+	@-ms-keyframes rainbow {
+	0% {color: #ff0000;}
+	10% {color: #ff8000;}
+	20% {color: #ffff00;}
+	30% {color: #80ff00;}
+	40% {color: #00ff00;}
+	50% {color: #00ff80;}
+	60% {color: #00ffff;}
+	70% {color: #0080ff;}
+	80% {color: #0000ff;}
+	90% {color: #8000ff;}
+	100% {color: #ff0080;}
+	}
+	@-o-keyframes rainbow {
+	0% {color: #ff0000;}
+	10% {color: #ff8000;}
+	20% {color: #ffff00;}
+	30% {color: #80ff00;}
+	40% {color: #00ff00;}
+	50% {color: #00ff80;}
+	60% {color: #00ffff;}
+	70% {color: #0080ff;}
+	80% {color: #0000ff;}
+	90% {color: #8000ff;}
+	100% {color: #ff0080;}
+	}
+	@keyframes rainbow {
+	0% {color: #ff0000;}
+	10% {color: #ff8000;}
+	20% {color: #ffff00;}
+	30% {color: #80ff00;}
+	40% {color: #00ff00;}
+	50% {color: #00ff80;}
+	60% {color: #00ffff;}
+	70% {color: #0080ff;}
+	80% {color: #0000ff;}
+	90% {color: #8000ff;}
+	100% {color: #ff0080;}
+}
+header ul {
+	float:right;
+
+}
+header ul li {
+	padding:25px;
+	display: inline-block;
+}
+header ul li a:hover {
+	color: #FF322D;
+}
+a {
+	text-decoration: none;
+	color:#333;
+}
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.container::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.mobile-menu{
+	float:right;
+	display:none;
+	padding:18px;
+}
+.mobile-menu:hover{
+	cursor:pointer;
+}
+
+#check{
+	display:none;
+}
+.sidebar{
+	position:fixed;
+	top:0;
+	bottom:0;
+	left:-300px;
+	width:300px;
+	transition:.4s;
+	background-color:rgba(40, 93, 180, .7);
+	z-index:9999;
+}
+.sidebar ul li a{
+	color:#fff;
+}
+.sidebar ul li{
+	padding:24px;
+	transition: .4s;
+	transition-property: background-color;
+}
+.sidebar ul li:hover{
+	background-color:#F84744;
+}
+#check:checked ~ .sidebar {
+	left:0;
+}
+
+i:hover {
+	color:red;
+}
+
+section{
+	padding:50px 0;
+}
+/*Responsive contactform*/
+@media (max-width: 991px) {
+	.mobile-menu{
+		display: block;
+	}
+	header ul {
+		display:none;
+	}
+	.contact{
+		padding: 50px;
+	}
+	.containerr{
+		flex-direction: column;
+	}
+	.containerr .contactInfo
+	{
+		margin-bottom: 40px;
+		display: flex;
+		
+    }
+	.contactInfo .containerr,
+	.contactform {
+		width: 100%;
+		column-width: 100%;
+		min-width: 90%;
+	}
+	
+
+}
+html{
+	scroll-behavior:auto;
+}
+/**/
+.content{
+	margin-bottom: 30px;
+	padding-bottom: 20%;
+}
+
+.content h2{
+	padding-top: 30px;
+	justify-content: center;
+}
+.contact {
+	position: relative;
+	min-height: 100vh;
+	padding: 50px 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color:#80cee1;
+	background-color:rgba(30, 93, 180, .9);
+	background-size: cover;
+}
+.contact .content {
+	max-width: 800px;
+	text-align:center;
+}
+.contact .content h2{
+	font-size: 36px;
+	font-weight: 400;
+	color:#eee;
+}
+.containerr{
+	width:100%;
+	display: flex;
+	justify-content: center;
+	align-items: 30px;
+	margin-top: 30px;
+}
+.containerr .contactInfo{
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+}
+.containerr .contactInfo .box{
+	position: relative;
+	padding: 20px 0;
+	display: flex;
+}
+.containerr .contactInfo .box .icon{
+	min-width: 60px;
+	height: 60px;
+	background:#fff;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	border-radius: 50%;
+	font-size: 22px;
+}
+.containerr .contactInfo .box .text{
+	display: flex;
+	margin-left: 20px;
+	font-size:16px;
+	color:#fff;
+	flex-direction: column;
+	font-weight: 300;
+}
+.text p{
+	color:white ;
+	font-weight: 300;
+	font: 'Poppins', sans-serif;
+}
+.containerr .contactInfo .box .text h3{
+	font-weight:500;
+	color:black;
+	font:'Poppins', sans-serif;
+}
+.contactform{
+	width:40%;
+	padding: 40px;
+	background:ghostwhite;
+}
+.contactform h2{
+	font-size:30px;
+	color:#333;
+	font-weight:500;
+}
+.contactform .inputBox{
+	position:relative;
+	width: 100%;
+	margin-top:10PX;
+}
+.contactform .inputBox input,
+.contactform .inputBox textarea{
+	width:100%;
+	padding:5px 0;
+	font-size:16px;
+	margin:10px 0;
+	border: none;
+	border-bottom: 2px solid #333;
+	outline: none;
+	resize: none;
+}
+.contactform .inputBox span{
+	position: absolute;
+	left:0;
+	padding:5px 0;
+	font-size:16px;
+	margin:10px 0;
+	transition: .5s;
+	pointer-events: none;
+	color:#666;
+}
+.contactform .inputBox input:focus ~ span,
+.contactform .inputBox input:valid ~ span,
+.contactform .inputBox textarea:focus ~ span,
+.contactform .inputBox textarea:valid ~ span {
+
+	color:#e91e63;
+	font-size: 12px;
+	transform: translateY(-20px);
+	
+}
+.contactform .inputBox input[type="submit"]{
+	width: 100%;
+	padding: 15px 40px;
+    background-color: #59A2D1;
+    cursor: pointer;
+    box-shadow: 0 7px #3F779C;
+}
+.contactform .inputBox input[type="submit"]:active{
+	position: relative;
+   	top: 7px;
+  	box-shadow: none;
+}
+h4{
+
+	text-align: center;
+}
+
+
+.footer{
+	margin:0;
+	padding: 0;
+}
+footer{
+	clear: both;
+	background-color: #333;
+	color: white;
+	padding: 15px;
+	text-align: center;
+}
+
+footer small {
+	color:#fff;
+}
